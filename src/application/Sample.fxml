@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+  <tabs>
+    <Tab text="ajouter un technicien">
+         <content>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="split">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TextField fx:id="code" layoutX="21.0" layoutY="79.0" promptText="Acode" styleClass="inp" />
+                        <TextField fx:id="reference" layoutX="198.0" layoutY="79.0" promptText="reference" styleClass="inp" />
+                        <TextField fx:id="name" layoutX="20.0" layoutY="39.0" promptText="name" styleClass="inp" />
+                        <TextField fx:id="phone" layoutX="197.0" layoutY="40.0" promptText="phone" styleClass="inp" />
+                        <Button layoutX="120.0" layoutY="125.0" mnemonicParsing="false" onAction="#AddTechnician" prefHeight="25.0" prefWidth="146.0" styleClass="btn" text="add Technicien" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="table" prefHeight="200.0" prefWidth="403.0">
+                          <columns>
+                            <TableColumn fx:id="idC" prefWidth="75.0" styleClass="column-header-background" text="id" />
+                            <TableColumn fx:id="nameC" prefWidth="75.0" styleClass="column-header-background" text="name" />
+                              <TableColumn fx:id="phoneC" prefWidth="75.0" styleClass="column-header-background" text="phone" />
+                              <TableColumn fx:id="referenceC" prefWidth="75.0" styleClass="column-header-background" text="reference" />
+                              <TableColumn fx:id="codeC" prefWidth="101.0" styleClass="column-header-background" text="access code" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="517.0" layoutY="143.0" mnemonicParsing="false" onAction="#ac" text="actualiser" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+    <Tab text="ajouter un client">
+         <content>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="split">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TextField fx:id="coins" layoutX="198.0" layoutY="95.0" promptText="coins" styleClass="inp" />
+                        <TextField fx:id="choice" layoutX="12.0" layoutY="95.0" promptText="choice" styleClass="inp" />
+                        <TextField fx:id="name1" layoutX="12.0" layoutY="45.0" promptText="name" styleClass="inp" />
+                        <TextField fx:id="phone1" layoutX="197.0" layoutY="45.0" promptText="phone" styleClass="inp" />
+                        <Button layoutX="112.0" layoutY="135.0" mnemonicParsing="false" onAction="#addClient" prefHeight="25.0" prefWidth="146.0" styleClass="btn" text="add Client" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="clientTable" prefHeight="200.0" prefWidth="409.0">
+                          <columns>
+                              <TableColumn fx:id="clid" prefWidth="75.0" styleClass="column-header-background" text="client Id" />
+                            <TableColumn fx:id="nameClient" prefWidth="75.0" styleClass="column-header-background" text="name" />
+                            <TableColumn fx:id="phonClient" prefWidth="75.0" styleClass="column-header-background" text="phone" />
+                              <TableColumn fx:id="choiceC" prefWidth="75.0" styleClass="column-header-background" text="choice" />
+                              <TableColumn fx:id="coinsC" prefWidth="106.33331298828125" styleClass="column-header-background" text="coins" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="525.0" layoutY="143.0" mnemonicParsing="false" onAction="#clientDispaly" text="refresh" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+      	
+      <Tab text="ajouter un produit">
+         <content>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="split">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TextField fx:id="price" layoutX="214.0" layoutY="62.0" promptText="price" styleClass="inp" />
+                        <TextField fx:id="productName" layoutX="15.0" layoutY="62.0" promptText="name" styleClass="inp" />
+                        <Button layoutX="117.0" layoutY="116.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="25.0" prefWidth="146.0" styleClass="btn" text="add Product" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="productTable" layoutX="2.0" layoutY="-9.0" prefHeight="200.0" prefWidth="371.0">
+                          <columns>
+                            <TableColumn fx:id="productId" prefWidth="105.66665649414062" styleClass="column-header-background" text="product ID" />
+                            <TableColumn fx:id="productNameC" prefWidth="133.33334350585938" styleClass="column-header-background" text="product name" />
+                              <TableColumn fx:id="priceC" prefWidth="131.33334350585938" styleClass="column-header-background" text="product Price" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="521.0" layoutY="137.0" mnemonicParsing="false" onAction="#displayProduct" text="refresh" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+      <Tab text="ajouter une machine">
+         <content>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="split">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Button layoutX="144.0" layoutY="85.0" mnemonicParsing="false" onAction="#addMachine" prefHeight="25.0" prefWidth="146.0" styleClass="btn" text="add New Machine" />
+                     </children></AnchorPane>
+                
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="machineTable" prefHeight="200.0" prefWidth="249.0">
+                          <columns>
+                            <TableColumn fx:id="machineId" prefWidth="144.33334350585938" styleClass="column-header-background" text="machine id" />
+                            <TableColumn fx:id="sum" prefWidth="103.0" styleClass="column-header-background" text="sumChange" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="497.0" layoutY="136.0" mnemonicParsing="false" onAction="#displayMachine" text="refresh ">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+      <Tab text="choice">
+         <content>
+            <SplitPane dividerPositions="0.7035040431266847" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="split">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <ComboBox fx:id="com" layoutX="169.0" layoutY="26.0" onAction="#selectItem" prefWidth="150.0" promptText="select machine" />
+                        <ListView fx:id="list" layoutX="17.0" layoutY="95.0" onMouseClicked="#selectProduct" prefHeight="156.0" prefWidth="305.0" />
+                        <Button layoutX="510.0" layoutY="129.0" mnemonicParsing="false" onAction="#turnOn" text="turn On" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TextField fx:id="label1" layoutX="234.0" layoutY="41.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+  </tabs>
+</TabPane>

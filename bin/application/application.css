@@ -1,0 +1,32 @@
+.split{
+	-fx-background-image: url('1.jpg');
+	-fx-background-size: cover ;
+}
+.inp{
+	-fx-background-color: none;
+	-fx-border-style: solid none solid none;
+	-fx-border-width: 2; 
+	-fx-border-color: #fff;
+}
+.inp:hover{
+	-fx-background-color: #000;
+	-fx-text-fill: #6f4e37;
+}
+.btn{
+	-fx-background-color: #6f4e37;
+	-fx-text-fill: #fff;
+	-fx-padding: 10;
+}
+.btn:hover{
+	-fx-background-color: #fff;
+	-fx-text-fill: #000;
+}
+.table-view{
+	-fx-background-color: #6f4e37 ;
+	-fx-background-radius: 30;
+}
+.table-view .column-header-background{
+	-fx-background-color: #6f4e37 ;
+	-fx-background-radius: 30;
+	-fx-text-fill: #fff;
+}
